@@ -1,4 +1,4 @@
-function ListItem (props) {
+function GalleryItem (props) {
     return (
         <>
          <img src={props.url}/> 
@@ -9,4 +9,4 @@ function ListItem (props) {
     )
 }
 
-export default ListItem;
+export default GalleryItem;

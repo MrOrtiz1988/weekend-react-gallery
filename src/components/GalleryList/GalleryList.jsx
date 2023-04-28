@@ -1,4 +1,4 @@
-import ListItem from '../GalleryItem/GalleryItem';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 
@@ -8,7 +8,7 @@ function GalleryList (props) {
         {
             props.gallery.map((item) => {
                 return (
-                   <ListItem 
+                   <GalleryItem 
                     key={item.id}
                     url={item.path}
                    /> 
