@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './GalleryItem.css';
 
 
 
@@ -6,10 +7,6 @@ function GalleryItem (props) {
 
     const [isDescription, setIsDescription] = useState(false);
 
-  // 1. Make the Toggle Shimmer button flip the isShimmering
-  //    state variable between false and true.
-  // 2. Conditionally apply the "shimmer" CSS class based on
-  //    the value of isShimmering.
   const toggleDescription = () => {
     if (isDescription) {
       setIsDescription(false)
@@ -19,29 +16,25 @@ function GalleryItem (props) {
   }
 
   const change = () => {
-    if(isDescription) {
+    if(!isDescription) {
         return (
-            <div>
-                <img src={props.url}/> 
-            </div>
+         <img onClick={toggleDescription} className="pic-description" src={props.url}/> 
         )
     }else {
         return (
-            <div>
-                <p>{props.description}</p>
-            </div>
+        <div onClick={toggleDescription} className="pic-description">{props.description}</div>
         )
     }
   }
 
 
     return (
-        <>
-         
+        <div className='single-item'>
+         {change()}
          <br></br> 
-         <button>Love it!</button>
+         <button className='like-btn'>Love it!</button>
          <p>0 people like this 😞</p> 
-        </>
+        </div>
     )
 }
 
