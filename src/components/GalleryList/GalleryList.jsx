@@ -11,7 +11,7 @@ function GalleryList (props) {
                    <GalleryItem 
                     key={item.id}
                     url={item.path}
-                    
+                    description={item.description}
                    /> 
                 )
             })
