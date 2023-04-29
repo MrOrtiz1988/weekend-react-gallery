@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
             console.log(`Error making POST request`, error);
             res.sendStatus(500); // Good server always responds
         })
-})
+})//END POST Route
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
