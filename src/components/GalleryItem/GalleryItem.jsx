@@ -15,7 +15,7 @@ function GalleryItem (props) {
     }
   }
 
-  const change = () => {
+  const changePicToDescription = () => {
     if(!isDescription) {
         return (
          <img onClick={toggleDescription} className="pic-description" src={props.url}/> 
@@ -30,7 +30,7 @@ function GalleryItem (props) {
 
     return (
         <div className='single-item'>
-         {change()}
+         {changePicToDescription()}
          <br></br> 
          <button className='like-btn'>Love it!</button>
          <p>0 people like this 😞</p> 
