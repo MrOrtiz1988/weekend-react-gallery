@@ -1,10 +1,10 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
-
+import './GalleryList.css';
 
 
 function GalleryList (props) {
     return (
-        <div>
+        <div className='gallery'>
         {
             props.gallery.map((item) => {
                 return (

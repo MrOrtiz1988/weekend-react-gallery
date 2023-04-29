@@ -25,7 +25,7 @@ function App() {
       console.log('whoopsie on fetchGallery', error);
     })
   }
-  console.log(gallery);
+  
 
 
 

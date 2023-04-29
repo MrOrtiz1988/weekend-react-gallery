@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './GalleryItem.css'
+import './GalleryItem.css';
 
 
 
@@ -22,19 +22,19 @@ function GalleryItem (props) {
         )
     }else {
         return (
-        <p onClick={toggleDescription} className="pic-description">{props.description}</p>
+        <div onClick={toggleDescription} className="pic-description">{props.description}</div>
         )
     }
   }
 
 
     return (
-        <>
+        <div className='single-item'>
          {change()}
          <br></br> 
-         <button>Love it!</button>
+         <button className='like-btn'>Love it!</button>
          <p>0 people like this 😞</p> 
-        </>
+        </div>
     )
 }
 
