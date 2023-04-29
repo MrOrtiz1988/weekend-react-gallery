@@ -35,6 +35,7 @@ function App() {
       <p>Gallery goes here</p>
       <GalleryList 
         gallery={gallery}
+        fetchGallery={fetchGallery}
       />
     </div>
   );
