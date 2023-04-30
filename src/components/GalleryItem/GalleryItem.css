@@ -13,6 +13,11 @@
     margin: 20px;
 }
 
-.like-btn {
+button {
     border-radius: 5px;
+    margin: 5px;
+}
+
+label {
+    margin: 5px;
 }

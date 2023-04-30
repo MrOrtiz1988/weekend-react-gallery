@@ -1,8 +1,5 @@
-import React from 'react';
 import { useState } from 'react';
 import './GalleryItem.css';
-import axios from "axios";
-
 
 function GalleryItem (props) {
 
@@ -28,14 +25,12 @@ function GalleryItem (props) {
     }
   }
 
- 
-
     return (
         <div className='single-item'>
          {changePicToDescription()}
          <br></br> 
          <button className='like-btn' onClick={props.likeHandler}>💖Love it!💖</button>
-         <button onClick={props.remove}>Delete</button>
+         <button className='delete-btn' onClick={props.remove}>Delete</button>
          <p>{props.likes} people love this {props.likes > 0 ? '😍' : '😞'}</p> 
         </div>
     )

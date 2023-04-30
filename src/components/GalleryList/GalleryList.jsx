@@ -1,8 +1,6 @@
-import React from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
 import './GalleryList.css';
 import axios from "axios";
-
 
 function GalleryList(props) {
 
@@ -28,7 +26,6 @@ function GalleryList(props) {
             console.log('whoopsie on remove', error);
         })
     }
-
 
     return (
         <div className='gallery'>
