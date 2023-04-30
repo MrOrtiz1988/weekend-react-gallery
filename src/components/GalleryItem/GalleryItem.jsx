@@ -7,7 +7,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 function GalleryItem (props) {
 
-    const [isDescription, setIsDescription] = useState(false);
+  const [isDescription, setIsDescription] = useState(false);
 
   const toggleDescription = () => {
     if (isDescription) {
