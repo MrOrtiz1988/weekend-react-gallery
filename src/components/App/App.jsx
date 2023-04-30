@@ -27,8 +27,6 @@ function App() {
       console.log('whoopsie on fetchGallery', error);
     })
   }
-  console.log(imagePath, description);
-
 
   return (
     <div className="App">

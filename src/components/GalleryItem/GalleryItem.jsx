@@ -35,7 +35,6 @@ function GalleryItem (props) {
          <br></br> 
          <Button variant="contained" className='like-btn' onClick={props.likeHandler}>💖Love it!💖</Button>
          <br></br>
-         {/* <Button variant="outlined" size="small" className='delete-btn' color="error" onClick={props.remove}>Delete</Button> */}
          <IconButton onClick={props.remove} aria-label="delete" size="large">
            <DeleteIcon color="secondary" fontSize='inherit' />
          </IconButton>
