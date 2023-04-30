@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
 router.put('/like/:id', (req, res) => {
 
     const galleryId = req.params.id;
-
+    //took me a while to figure this one out on how to add one to the id's like value 
     let sqlText = `
         UPDATE "gallery"
         SET "likes"= "likes" + 1
@@ -79,7 +79,7 @@ router.delete('/:id', (req, res) => {
         res.sendStatus(200);
       })
       .catch((dbErr) => {
-        console.log('delete /creatures error:', dbErr);
+        console.log('delete /delete error:', dbErr);
       
         res.sendStatus(500);
       })

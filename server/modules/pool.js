@@ -6,5 +6,4 @@ const pool = new pg.Pool({
     database: 'react_gallery' 
 });
 
-
 module.exports = pool;
