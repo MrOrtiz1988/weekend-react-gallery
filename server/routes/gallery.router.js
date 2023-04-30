@@ -62,4 +62,27 @@ router.put('/like/:id', (req, res) => {
         })
 }); // END PUT Route
 
+//DELETE Route
+router.delete('/:id', (req, res) => {
+    
+    let idToDelete = req.params.id;
+  
+    let sqlText = `
+      DELETE FROM "gallery"
+        WHERE "id"=$1;
+    `
+    let sqlValues = [idToDelete]
+  
+    pool.query(sqlText, sqlValues)
+      .then((dbRes) => {
+
+        res.sendStatus(200);
+      })
+      .catch((dbErr) => {
+        console.log('delete /creatures error:', dbErr);
+      
+        res.sendStatus(500);
+      })
+  })//END DELETE Route
+
 module.exports = router;
