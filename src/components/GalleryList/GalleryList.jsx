@@ -4,6 +4,7 @@ import axios from "axios";
 
 function GalleryList(props) {
 
+    //likeHandler updates the column in databes which value holds the number of likes
     const likeHandler = (id) => {
         axios({
             method: 'PUT',
@@ -16,10 +17,11 @@ function GalleryList(props) {
         })
     }
 
-    const remove = (listId) => {
+    //remove deletes from the database where the row equals its id
+    const remove = (Id) => {
         axios({
             method: 'DELETE',
-            url: `/gallery/${listId}`,
+            url: `/gallery/${Id}`,
         }).then(function(response){
             props.fetchGallery();
         }).catch(function(error) {
@@ -27,6 +29,7 @@ function GalleryList(props) {
         })
     }
 
+    //this return is responsible for looping through the rows with its values and attach each one to the GalleryItem component
     return (
         <div className='gallery'>
             {

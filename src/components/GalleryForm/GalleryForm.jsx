@@ -4,6 +4,8 @@ import Input from '@mui/material/Input';
 
 function GalleryForm(props) {
 
+  //sendData sends values that where currently typed in the input to the database, then fetchGallery is run to keep DOM in sync
+  //also resets the values in the inputs back to empty 
   const sendData = (event) => {
     event.preventDefault();
     axios({
@@ -22,6 +24,7 @@ function GalleryForm(props) {
     })
   }
 
+  //in this return i used a material-ui componenet to be used as an input
   return (
     <form onSubmit={sendData}>
       <h2>Add a Photo!</h2>

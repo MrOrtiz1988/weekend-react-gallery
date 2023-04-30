@@ -9,6 +9,7 @@ function GalleryItem (props) {
 
   const [isDescription, setIsDescription] = useState(false);
 
+  //this toggles from false to true to be used with the changePicToDescription function
   const toggleDescription = () => {
     if (isDescription) {
       setIsDescription(false)
@@ -17,6 +18,7 @@ function GalleryItem (props) {
     }
   }
 
+  //this function is responsible for when you click on the image it switches out to show a description
   const changePicToDescription = () => {
     if(!isDescription) {
         return (
@@ -29,6 +31,7 @@ function GalleryItem (props) {
     }
   }
 
+  //had some more fun swapping out the normal html stuff with the components that material-ui offers
     return (
         <div className='single-item'>
          {changePicToDescription()}
