@@ -7,7 +7,6 @@ import GalleryList from '../GalleryList/GalleryList';
 import GalleryForm from '../GalleryForm/GalleryForm';
 
 
-
 function App() {
 
   const [gallery, setGallery] = useState([]);
@@ -28,7 +27,6 @@ function App() {
       console.log('whoopsie on fetchGallery', error);
     })
   }
-
 
   return (
     <div className="App">
