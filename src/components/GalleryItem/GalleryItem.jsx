@@ -35,6 +35,7 @@ function GalleryItem (props) {
          {changePicToDescription()}
          <br></br> 
          <button className='like-btn' onClick={props.likeHandler}>💖Love it!💖</button>
+         <button onClick={props.remove}>Delete</button>
          <p>{props.likes} people love this {props.likes > 0 ? '😍' : '😞'}</p> 
         </div>
     )

@@ -18,6 +18,17 @@ function GalleryList(props) {
         })
     }
 
+    const remove = (listId) => {
+        axios({
+            method: 'DELETE',
+            url: `/gallery/${listId}`,
+        }).then(function(response){
+            props.fetchGallery();
+        }).catch(function(error) {
+            console.log('whoopsie on remove', error);
+        })
+    }
+
 
     return (
         <div className='gallery'>
@@ -30,6 +41,7 @@ function GalleryList(props) {
                             description={item.description}
                             likeHandler={() => likeHandler(item.id)}
                             likes={item.likes}
+                            remove={() => remove(item.id)}
                         />
                     )
                 })
