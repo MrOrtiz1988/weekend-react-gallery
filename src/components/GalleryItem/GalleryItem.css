@@ -13,11 +13,11 @@
     margin: 20px;
 }
 
-button {
-    border-radius: 5px;
-    margin: 5px;
+.form-div {
+    margin-bottom: 5px;
 }
 
-label {
+.input-div {
+    display: inline;
     margin: 5px;
 }

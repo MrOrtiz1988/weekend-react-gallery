@@ -1,5 +1,9 @@
+import * as React from 'react';
 import { useState } from 'react';
 import './GalleryItem.css';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function GalleryItem (props) {
 
@@ -29,8 +33,12 @@ function GalleryItem (props) {
         <div className='single-item'>
          {changePicToDescription()}
          <br></br> 
-         <button className='like-btn' onClick={props.likeHandler}>💖Love it!💖</button>
-         <button className='delete-btn' onClick={props.remove}>Delete</button>
+         <Button variant="contained" className='like-btn' onClick={props.likeHandler}>💖Love it!💖</Button>
+         <br></br>
+         {/* <Button variant="outlined" size="small" className='delete-btn' color="error" onClick={props.remove}>Delete</Button> */}
+         <IconButton onClick={props.remove} aria-label="delete" size="large">
+           <DeleteIcon color="secondary" fontSize='inherit' />
+         </IconButton>
          <p>{props.likes} people love this {props.likes > 0 ? '😍' : '😞'}</p> 
         </div>
     )
